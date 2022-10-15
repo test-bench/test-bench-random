@@ -22,6 +22,10 @@ module TestBench
       instance
     end
 
+    def fraction
+      generator.rand
+    end
+
     def boolean
       byte = generator.bytes(1).bytes.first
 
