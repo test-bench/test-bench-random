@@ -27,6 +27,12 @@ module TestBench
       instance
     end
 
+    def fraction
+      self.sequence += 1
+
+      generator.rand
+    end
+
     def boolean
       byte = next_qword.bytes.first
 
