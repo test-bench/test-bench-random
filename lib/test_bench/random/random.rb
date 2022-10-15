@@ -27,6 +27,16 @@ module TestBench
       instance
     end
 
+    def boolean
+      byte = next_qword.bytes.first
+
+      if byte % 2 == 1
+        true
+      else
+        false
+      end
+    end
+
     def reset?(namespace=nil)
       namespace ||= self.namespace
 
