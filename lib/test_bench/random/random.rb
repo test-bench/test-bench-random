@@ -22,6 +22,18 @@ module TestBench
       instance
     end
 
+    def integer
+      bytes = generator.bytes(8).bytes
+
+      number = 0
+
+      bytes.each_with_index do |byte, index|
+        number += byte ** index
+      end
+
+      number
+    end
+
     def fraction
       generator.rand
     end
