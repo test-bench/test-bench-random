@@ -22,6 +22,10 @@ module TestBench
       instance
     end
 
+    def string
+      integer.to_s(36)
+    end
+
     def integer
       bytes = generator.bytes(8).bytes
 
