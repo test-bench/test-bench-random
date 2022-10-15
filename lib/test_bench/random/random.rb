@@ -27,6 +27,18 @@ module TestBench
       instance
     end
 
+    def integer
+      bytes = next_qword.bytes
+
+      number = 0
+
+      bytes.each_with_index do |byte, index|
+        number += byte ** index
+      end
+
+      number
+    end
+
     def fraction
       self.sequence += 1
 
