@@ -22,6 +22,36 @@ module TestBench
       instance
     end
 
+    def string
+      integer.to_s(36)
+    end
+
+    def integer
+      bytes = generator.bytes(8).bytes
+
+      number = 0
+
+      bytes.each_with_index do |byte, index|
+        number += byte ** index
+      end
+
+      number
+    end
+
+    def fraction
+      generator.rand
+    end
+
+    def boolean
+      byte = generator.bytes(1).bytes.first
+
+      if byte % 2 == 1
+        true
+      else
+        false
+      end
+    end
+
     def reset(namespace=nil)
       namespace ||= self.namespace
 
