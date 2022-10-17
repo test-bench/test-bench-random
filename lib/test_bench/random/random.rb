@@ -22,6 +22,16 @@ module TestBench
       instance
     end
 
+    def self.instance
+      @instance ||= build
+    end
+
+    def self.string = instance.string
+    def self.integer = instance.integer
+    def self.fraction = instance.fraction
+    def self.boolean = instance.boolean
+    def self.reset(...) = instance.reset(...)
+
     def string
       integer.to_s(36)
     end
