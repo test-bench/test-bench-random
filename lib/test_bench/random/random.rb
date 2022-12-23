@@ -15,6 +15,13 @@ module TestBench
     end
     attr_writer :namespace
 
+    def self.configure(receiver, attr_name: nil)
+      attr_name ||= :random
+
+      instance = build
+      receiver.public_send(:"#{attr_name}=", instance)
+    end
+
     def self.build(seed=nil, namespace: nil)
       instance = new
       instance.seed = seed
