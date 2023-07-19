@@ -27,6 +27,16 @@ module TestBench
       instance
     end
 
+    def reset?(namespace=nil)
+      namespace ||= self.namespace
+
+      if namespace != self.namespace
+        return false
+      end
+
+      sequence.zero?
+    end
+
     def next_qword
       self.sequence += 1
 
