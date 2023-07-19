@@ -134,6 +134,22 @@ module TestBench
       end
     end
 
+    module Substitute
+      def self.build
+        Random.build
+      end
+
+      class Random < Random
+        alias :set_seed :seed=
+
+        def self.build
+          instance = new
+          instance.set_seed(0)
+          instance
+        end
+      end
+    end
+
     module Defaults
       def self.seed
         seed = ENV['TEST_BENCH_SEED']
