@@ -27,6 +27,16 @@ module TestBench
       instance
     end
 
+    def self.instance
+      @instance ||= build
+    end
+
+    def self.configure(receiver, attr_name: nil)
+      attr_name ||= :random
+
+      receiver.public_send(:"#{attr_name}=", instance)
+    end
+
     def string
       integer.to_s(36)
     end
