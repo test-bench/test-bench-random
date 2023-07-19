@@ -27,6 +27,12 @@ module TestBench
       instance
     end
 
+    def next_qword
+      self.sequence += 1
+
+      generator.bytes(8)
+    end
+
     def reset(namespace=nil)
       namespace ||= self.namespace
 
