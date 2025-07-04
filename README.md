@@ -1,12 +1,10 @@
 # Test Bench Random
 
-*[Summary goes here]*
-
-*[Description goes here]*
+64-bit pseudorandom value generator for TestBench. Provides string, integer, decimal, and boolean values.
 
 ## Documentation
 
-*[Link to documentation goes here]*
+See the [TestBench website](http://test-bench.software) for more information, examples, and user guides.
 
 ## License
 

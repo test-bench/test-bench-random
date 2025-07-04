@@ -12,4 +12,4 @@ require 'pp'
 
 require 'test_bench_bootstrap'; TestBenchBootstrap.activate
 
-#TestBench::ImportConstants.(TestBench::Random)
+TestBenchBootstrap::ImportConstants.(TestBench::Random)
