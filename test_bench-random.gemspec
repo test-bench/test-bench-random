@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |spec|
   spec.name = 'test_bench-random'
-  spec.version = '3.0.0.0.pre.2'
+  spec.version = '3.0.0.0'
 
   spec.summary = "64-bit pseudorandom value generator for TestBench"
   spec.description = <<~TEXT.each_line(chomp: true).map(&:strip).join(' ')
